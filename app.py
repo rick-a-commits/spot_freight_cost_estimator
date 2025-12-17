@@ -62,14 +62,15 @@ df = df[['distance_km', 'weight_tons', 'carrier_name_DB Schenker', 'carrier_name
 with open('best_model.pkl', 'rb') as h:
       model = pickle.load(h)
       suggested_cost = model.predict(df)
-      suggested_cost = round(suggested_cost[0],2)
+      suggested_cost = suggested_cost[0]
+      suggested_cost = round(suggested_cost,2)
       
 # Set show=False to prevent immediate plotting
       
       
 st.write(f"given a distance of **{distance_km} KM** and weight of **{weight_tons} tons**,")
 st.write(f"using **{carrier_name}**, **{truck_type} Truck**, and **{priority_level} priority**,")
-st.write(f"the suggested price is **{suggested_cost}** Eur")
+st.write(f"the suggested price is **{suggested_cost:.2f}** Eur")
 
 
 with open('best_model.pkl', 'rb') as h:
