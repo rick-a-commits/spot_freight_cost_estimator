@@ -16,3 +16,9 @@
 | **destination\_country** | Country where the shipment is delivered.                                                           |
 | **fuel\_price\_eur\_l**  | Fuel price in euros per liter at the time of shipment, affecting transportation cost.              |
 | **cost\_eur**            | Total cost of the shipment in euros, the target variable for modeling shipment costs.              |
+
+
+The model is a Linear Regression Model with a r2 score of 0.84
+
+
+The model is deployable using streamlit
