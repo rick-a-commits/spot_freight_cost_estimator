@@ -75,8 +75,8 @@ st.write(f"the suggested price is **{suggested_cost:.2f}** Eur")
 
 with open('best_model.pkl', 'rb') as h:
       model = pickle.load(h)
-      explainer = shap.Explainer(model.predict, X_train_numeric.iloc[:200])
-      shap_values = explainer(X_test_numeric[:200])
+      explainer = shap.Explainer(model.predict, X_train_numeric.iloc[:50])
+      shap_values = explainer(X_test_numeric[:50])
       fig, ax = plt.subplots(figsize=(10, 6))
       shap.plots.beeswarm(shap_values, show=False)
       
