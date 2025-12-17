@@ -73,17 +73,7 @@ st.write(f"using **{carrier_name}**, **{truck_type} Truck**, and **{priority_lev
 st.write(f"the suggested price is **{suggested_cost:.2f}** Eur")
 
 
-with open('best_model.pkl', 'rb') as h:
-      model = pickle.load(h)
-      explainer = shap.Explainer(model.predict, X_train_numeric.iloc[:50])
-      shap_values = explainer(X_test_numeric[:50])
-      fig, ax = plt.subplots(figsize=(10, 6))
-      shap.plots.beeswarm(shap_values, show=False)
-      
-      plt.title("Factors inlfuencing Spot Freight Cost - highest to lowers")
-      plt.tight_layout()
-      st.pyplot(fig)
-      
+st.image("image.png")
 
       
       
