@@ -46,10 +46,10 @@ The dataset contains historical shipment records with operational, geographic, a
 
 ## Modeling Approach
 
-* **Model type:** Linear Regression
+* **Model type:** XGB Regressor
 * **Target variable:** `cost_eur`
 * **Evaluation metric:** R² score
-* **Performance:** R² ≈ **0.84** on the test set
+* **Performance:** R² ≈ **0.87** ; MAE ≈ 186858, RMSE ≈ 432.27,on the test set
 
 The model captures the relationship between shipment characteristics, distance, fuel prices, and service constraints to produce cost estimates suitable for real‑world negotiation support.
 
@@ -86,8 +86,7 @@ It demonstrates how historical logistics data can be transformed into a practica
 
 ## Future Improvements
 
-* Add additional models (e.g., Random Forest, Gradient Boosting) for comparison
-* Expand evaluation metrics (MAE, RMSE, residual analysis)
+* Expand evaluation metrics ( residual analysis)
 * Package preprocessing and inference into a unified pipeline
 * Add automated tests and CI workflows
 * Deploy the app to a cloud platform
